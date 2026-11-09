@@ -1,0 +1,36 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/*
+ * MATRIX TEST KEYMAP
+ * Every crossing of the 7x4 grid on each half types a unique character.
+ * Left half : a-z, 1, 2   (index = stack*4 + wire)
+ * Right half: A-Z, 3, 4
+ * Each line below is one stack (S1..S7); entries are T1 T2 T3 T4.
+ */
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                // left half
+                &kp A         &kp B         &kp C         &kp D
+                &kp E         &kp F         &kp G         &kp H
+                &kp I         &kp J         &kp K         &kp L
+                &kp M         &kp N         &kp O         &kp P
+                &kp Q         &kp R         &kp S         &kp T
+                &kp U         &kp V         &kp W         &kp X
+                &kp Y         &kp Z         &kp N1        &kp N2
+                // right half
+                &kp LS(A)     &kp LS(B)     &kp LS(C)     &kp LS(D)
+                &kp LS(E)     &kp LS(F)     &kp LS(G)     &kp LS(H)
+                &kp LS(I)     &kp LS(J)     &kp LS(K)     &kp LS(L)
+                &kp LS(M)     &kp LS(N)     &kp LS(O)     &kp LS(P)
+                &kp LS(Q)     &kp LS(R)     &kp LS(S)     &kp LS(T)
+                &kp LS(U)     &kp LS(V)     &kp LS(W)     &kp LS(X)
+                &kp LS(Y)     &kp LS(Z)     &kp N3        &kp N4
+            >;
+        };
+    };
+};

@@ -1,0 +1,5 @@
+config SHIELD_HW46_LEFT
+    def_bool $(shields_list_contains,hw46_left)
+
+config SHIELD_HW46_RIGHT
+    def_bool $(shields_list_contains,hw46_right)
