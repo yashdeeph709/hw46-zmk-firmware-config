@@ -8,6 +8,13 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+if SHIELD_HW46_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "HW46-R"
+
+endif
+
 if SHIELD_HW46_LEFT || SHIELD_HW46_RIGHT
 
 config ZMK_SPLIT
